@@ -50,6 +50,17 @@ func main() {
 		}()
 	}
 
+	configFile := utl.PathJoin(app.DataPath, "config.yaml")
+	if !utl.Exists(configFile) {
+		log.Info().Msg("Creating default config...")
+		if err := utl.WriteToFile(configFile, `enableAutomaticUpdates: false`); err != nil {
+			log.Error().Err(err).Msg("Cannot write default config")
+		}
+	}
+	if err := utl.ReplaceByPrefix(configFile, "enableAutomaticUpdates:", "enableAutomaticUpdates: false"); err != nil {
+		log.Fatal().Err(err).Msg("Cannot set enableAutomaticUpdates property")
+	}
+
 	defer app.Close()
 	app.Launch(os.Args[1:])
 }
