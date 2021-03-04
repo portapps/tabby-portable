@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.134-3 (2021/03/05)
+
+* Terminus 1.0.134
+* Portapps 3.3.0
+* Go 1.16
+
 ## 1.0.122-2 (2020/12/27)
 
 * Check for updates disabled
