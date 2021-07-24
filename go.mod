@@ -1,4 +1,4 @@
-module github.com/portapps/terminus-portable
+module github.com/portapps/tabby-portable
 
 go 1.16
 

@@ -1,28 +1,28 @@
-<p align="center"><a href="https://portapps.io/app/terminus-portable/" target="_blank"><img width="100" src="https://github.com/portapps/terminus-portable/blob/master/res/papp.png"></a></p>
+<p align="center"><a href="https://portapps.io/app/tabby-portable/" target="_blank"><img width="100" src="https://github.com/portapps/tabby-portable/blob/master/res/papp.png"></a></p>
 
 <p align="center">
-  <a href="https://portapps.io/app/terminus-portable/#download"><img src="https://img.shields.io/github/release/portapps/terminus-portable.svg?style=flat-square" alt="GitHub release"></a>
-  <a href="https://portapps.io/app/terminus-portable/#download"><img src="https://img.shields.io/github/downloads/portapps/terminus-portable/total.svg?style=flat-square" alt="Total downloads"></a>
-  <a href="https://github.com/portapps/terminus-portable/actions?workflow=build"><img src="https://img.shields.io/github/workflow/status/portapps/terminus-portable/build?label=build&logo=github&style=flat-square" alt="Build Status"></a>
-  <a href="https://goreportcard.com/report/github.com/portapps/terminus-portable"><img src="https://goreportcard.com/badge/github.com/portapps/terminus-portable?style=flat-square" alt="Go Report"></a>
+  <a href="https://portapps.io/app/tabby-portable/#download"><img src="https://img.shields.io/github/release/portapps/tabby-portable.svg?style=flat-square" alt="GitHub release"></a>
+  <a href="https://portapps.io/app/tabby-portable/#download"><img src="https://img.shields.io/github/downloads/portapps/tabby-portable/total.svg?style=flat-square" alt="Total downloads"></a>
+  <a href="https://github.com/portapps/tabby-portable/actions?workflow=build"><img src="https://img.shields.io/github/workflow/status/portapps/tabby-portable/build?label=build&logo=github&style=flat-square" alt="Build Status"></a>
+  <a href="https://goreportcard.com/report/github.com/portapps/tabby-portable"><img src="https://goreportcard.com/badge/github.com/portapps/tabby-portable?style=flat-square" alt="Go Report"></a>
   <br /><a href="https://github.com/sponsors/crazy-max"><img src="https://img.shields.io/badge/sponsor-crazy--max-181717.svg?logo=github&style=flat-square" alt="Become a sponsor"></a>
   <a href="https://www.paypal.me/crazyws"><img src="https://img.shields.io/badge/donate-paypal-00457c.svg?logo=paypal&style=flat-square" alt="Donate Paypal"></a>
 </p>
 
 ## Notice of Non-Affiliation and Disclaimer
 
-Portapps is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Terminus™,
+Portapps is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Tabby™,
 or any of its subsidiaries or its affiliates.
 
-The official Terminus™ website can be found at https://eugeny.github.io/terminus/.
+The official Tabby™ website can be found at https://tabby.sh.
 
-The name Terminus™ as well as related names, marks, emblems and images are registered trademarks of their respective
+The name Tabby™ as well as related names, marks, emblems and images are registered trademarks of their respective
 owners.
 
 ## About
 
-Terminus™ portable app made with 🚀 [Portapps](https://portapps.io).<br />
-Documentation and downloads can be found on https://portapps.io/app/terminus-portable/
+Tabby™ portable app made with 🚀 [Portapps](https://portapps.io).<br />
+Documentation and downloads can be found on https://portapps.io/app/tabby-portable/
 
 ## How can I help?
 

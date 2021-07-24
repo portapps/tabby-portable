@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="terminus" basedir=".">
+<project name="tabby" basedir=".">
 
-  <dirname property="app.basedir" file="${ant.file.terminus}"/>
+  <dirname property="app.basedir" file="${ant.file.tabby}"/>
   <property name="build.properties" value="${app.basedir}/build.properties"/>
   <property file="${build.properties}"/>
 
