@@ -1,10 +1,10 @@
 //go:generate go install -v github.com/josephspurrier/goversioninfo/cmd/goversioninfo
-//go:generate goversioninfo -icon=res/papp.ico -manifest=res/papp.manifest
 package main
 
 import (
 	"os"
 	"path"
+	"path/filepath"
 
 	"github.com/portapps/portapps/v3"
 	"github.com/portapps/portapps/v3/pkg/log"
@@ -36,7 +36,7 @@ func init() {
 
 func main() {
 	utl.CreateFolder(app.DataPath)
-	app.Process = utl.PathJoin(app.AppPath, "Tabby.exe")
+	app.Process = filepath.Join(app.AppPath, "Tabby.exe")
 	app.Args = []string{
 		"--user-data-dir=" + app.DataPath,
 	}
@@ -50,7 +50,7 @@ func main() {
 		}()
 	}
 
-	configFile := utl.PathJoin(app.DataPath, "config.yaml")
+	configFile := filepath.Join(app.DataPath, "config.yaml")
 	if !utl.Exists(configFile) {
 		log.Info().Msg("Creating default config...")
 		if err := utl.WriteToFile(configFile, `enableAutomaticUpdates: false`); err != nil {
