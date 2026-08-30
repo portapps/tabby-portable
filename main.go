@@ -3,12 +3,11 @@ package main
 
 import (
 	"os"
-	"path"
 	"path/filepath"
 
 	"github.com/portapps/portapps/v3"
+	"github.com/portapps/portapps/v3/pkg/files"
 	"github.com/portapps/portapps/v3/pkg/log"
-	"github.com/portapps/portapps/v3/pkg/utl"
 )
 
 type config struct {
@@ -35,7 +34,9 @@ func init() {
 }
 
 func main() {
-	utl.CreateFolder(app.DataPath)
+	if err := os.MkdirAll(app.DataPath, os.ModePerm); err != nil {
+		log.Fatal().Err(err).Msg("Cannot create data directory.")
+	}
 	app.Process = filepath.Join(app.AppPath, "Tabby.exe")
 	app.Args = []string{
 		"--user-data-dir=" + app.DataPath,
@@ -44,20 +45,18 @@ func main() {
 	// Cleanup on exit
 	if cfg.Cleanup {
 		defer func() {
-			utl.Cleanup([]string{
-				path.Join(os.Getenv("APPDATA"), "tabby"),
-			})
+			files.Cleanup(filepath.Join(os.Getenv("APPDATA"), "tabby"))
 		}()
 	}
 
 	configFile := filepath.Join(app.DataPath, "config.yaml")
-	if !utl.Exists(configFile) {
+	if _, err := os.Stat(configFile); os.IsNotExist(err) {
 		log.Info().Msg("Creating default config...")
-		if err := utl.WriteToFile(configFile, `enableAutomaticUpdates: false`); err != nil {
+		if err := os.WriteFile(configFile, []byte(`enableAutomaticUpdates: false`), 0644); err != nil {
 			log.Error().Err(err).Msg("Cannot write default config")
 		}
 	}
-	if err := utl.ReplaceByPrefix(configFile, "enableAutomaticUpdates:", "enableAutomaticUpdates: false"); err != nil {
+	if err := files.ReplaceByPrefix(configFile, "enableAutomaticUpdates:", "enableAutomaticUpdates: false"); err != nil {
 		log.Fatal().Err(err).Msg("Cannot set enableAutomaticUpdates property")
 	}
 
